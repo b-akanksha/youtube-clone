@@ -6,7 +6,15 @@ const reducer = (state = initialState, { type, payload }) => {
     case actionTypes.SET_LOADING:
       return { ...state, loading: payload };
     case actionTypes.GET_DATA:
-      return { ...state, loading: false, searchVideos: payload };
+      if (payload.length) {
+        return {
+          ...state,
+          loading: false,
+          searchVideos: payload,
+          selectedVideo: payload[0],
+        };
+      }
+      break;
     case actionTypes.ERROR_OCCURED:
       return {
         ...state,

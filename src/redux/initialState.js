@@ -1,6 +1,7 @@
 const initialState = {
   loading: false,
   searchVideos: [],
+  selectedVideo: {},
   error: {
     open: false,
     message: "",
