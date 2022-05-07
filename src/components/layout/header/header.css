@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header__search {
+  width: 70%;
+  height: 2rem;
+  border-radius: 10px;
+  padding: 8px 16px;
+  outline: none;
+  background-color: var(--eerie-black);
+  border: none;
+  color: var(--white);
+}
+
+::-webkit-input-placeholder {
+  color: var(--white);
+}
