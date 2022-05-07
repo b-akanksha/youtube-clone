@@ -1,0 +1,40 @@
+.body-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.no-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-result__img {
+  width: 150px;
+}
+
+.no-result__text {
+  width: 200px;
+  background-color: var(--madder-lake);
+  margin: 8px;
+  padding: 0 8px;
+  border-radius: 8px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+.main-video {
+  flex-grow: 2;
+}
+
+.tiles {
+  flex-grow: 1;
+  overflow-y: auto;
+}
