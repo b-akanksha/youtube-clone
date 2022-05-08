@@ -1,0 +1,9 @@
+.selected-video {
+  margin: 24px;
+  width: 100%;
+}
+
+.selected-video-iframe {
+  width: 800px;
+  height: 400px;
+}

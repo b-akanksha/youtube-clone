@@ -4,9 +4,17 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin: 16px 0;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  position: relative;
 }
 
 .no-result {
@@ -35,6 +43,11 @@
 }
 
 .tiles {
-  flex-grow: 1;
+  height: 90vh;
   overflow-y: auto;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; */
 }

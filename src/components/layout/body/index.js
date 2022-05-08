@@ -1,5 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setSelectedVideo } from "../../../redux/actions";
+import SelectedVideo from "../selectedVideo";
 import VideoTiles from "../videotiles";
 import "./body.css";
 
@@ -7,22 +9,31 @@ const Body = () => {
   const { searchVideos, selectedVideo } = useSelector(
     (state) => state.youtubeify
   );
+
+  const dispatch = useDispatch();
+
+  const handleClick = (item) => dispatch(setSelectedVideo(item));
+
   return (
     <div className="body-container">
       {searchVideos && searchVideos.length > 0 ? (
-        <>
+        <div className="video-container">
           <div className="main-video" key="main-div">
-            <VideoTiles
+            <SelectedVideo
               item={selectedVideo}
               key={`selected-${selectedVideo?.id?.videoId}`}
             />
           </div>
           <div className="tiles" key="tiles">
             {searchVideos?.map((item) => (
-              <VideoTiles item={item} key={item?.id?.videoId} />
+              <VideoTiles
+                item={item}
+                key={`thumbnail-${item?.id?.videoId}`}
+                handleClick={() => handleClick(item)}
+              />
             ))}
           </div>
-        </>
+        </div>
       ) : (
         <div className="no-result">
           <img
