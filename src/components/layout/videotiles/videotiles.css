@@ -1,0 +1,11 @@
+.video-tiles {
+  margin: 0 8px;
+  width: 250px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.video-thumbail {
+  width: 100%;
+  height: 100%;
+}

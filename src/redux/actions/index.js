@@ -3,6 +3,7 @@ export const actionTypes = {
   GET_DATA: "GET_DATA",
   ERROR_OCCURED: "ERROR_OCCURED",
   CLEAR_ERROR: "CLEAR_ERROR",
+  SET_SELECTED_VIDEO: "SET_SELECTED_VIDEO",
 };
 
 export const setLoading = (payload) => ({
@@ -22,4 +23,9 @@ export const setError = (payload) => ({
 
 export const clearError = () => ({
   type: actionTypes.CLEAR_ERROR,
+});
+
+export const setSelectedVideo = (payload) => ({
+  type: actionTypes.SET_SELECTED_VIDEO,
+  payload,
 });

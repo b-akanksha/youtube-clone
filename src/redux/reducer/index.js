@@ -23,6 +23,8 @@ const reducer = (state = initialState, { type, payload }) => {
       };
     case actionTypes.CLEAR_ERROR:
       return { ...state, error: { open: false, message: "", code: 0 } };
+    case actionTypes.SET_SELECTED_VIDEO:
+      return { ...state, selectedVideo: payload };
     default:
       return { ...state };
   }

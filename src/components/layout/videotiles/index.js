@@ -1,12 +1,13 @@
 import React from "react";
+import "./videotiles.css";
 
-const VideoTiles = ({ item }) => {
+const VideoTiles = ({ item, handleClick }) => {
   return (
-    <div>
-      <iframe
-        key={item?.id?.videoId}
-        src={`https://www.youtube.com/embed/${item?.id?.videoId}`}
-        title={item?.snippet?.title}
+    <div className="video-tiles" role="button" onClick={handleClick}>
+      <img
+        src={item?.snippet?.thumbnails?.high?.url}
+        alt={item?.snippet?.title}
+        className="video-thumbail"
       />
     </div>
   );
