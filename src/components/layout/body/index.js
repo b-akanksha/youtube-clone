@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import VideoTiles from "../videotiles";
 import img from "../../../assets/browsing.png";
 import "./body.css";
+import SelectedVideo from "../selectedVideo";
 
 const Body = () => {
   const { searchVideos, selectedVideo } = useSelector(
@@ -13,7 +14,7 @@ const Body = () => {
       {searchVideos && searchVideos.length > 0 ? (
         <>
           <div className="main-video" key="main-div">
-            <VideoTiles
+            <SelectedVideo
               item={selectedVideo}
               key={`selected-${selectedVideo?.id?.videoId}`}
             />
