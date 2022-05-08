@@ -1,4 +1,5 @@
 import React from "react";
+import img from "../../../assets/warning.png";
 import "./error.css";
 
 class ErrorBoundary extends React.Component {
@@ -24,11 +25,7 @@ class ErrorBoundary extends React.Component {
         <div className="error-container">
           <details>
             <summary className="error__summary">
-              <img
-                src="/assets/warning.png"
-                alt="warning"
-                className="error__img"
-              />
+              <img src={img} alt="warning" className="error__img" />
               <h3 className="error__main-text">Something went wrong.</h3>
             </summary>
             <p className="error__text">error.message</p>
