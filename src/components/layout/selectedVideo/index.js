@@ -10,6 +10,7 @@ const SelectedVideo = ({ item }) => {
   return (
     <div className="selected-video">
       <iframe
+        frameBorder={0}
         className="selected-video-iframe"
         key={item?.id?.videoId}
         src={`https://www.youtube.com/embed/${item?.id?.videoId}`}
